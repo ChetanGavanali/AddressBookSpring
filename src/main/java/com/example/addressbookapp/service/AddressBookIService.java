@@ -23,4 +23,10 @@ public interface AddressBookIService {
 
     List<AddressBook> getAddressBookBycity(String city);
 
+    String insertRecord(AddressDto addressDto);
+
+    List<AddressBook> getDataByToken(String token);
+
+    Optional<AddressBook> getAllUserByToken(String token);
+
 }

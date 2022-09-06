@@ -26,4 +26,9 @@ public class ResponseDto {
         this.message = string;
         this.object = allEmp.toString();
     }
+
+    public ResponseDto(String string, AddressBook token) {
+        this.message=string;
+        this.object= String.valueOf(token);
+    }
 }
