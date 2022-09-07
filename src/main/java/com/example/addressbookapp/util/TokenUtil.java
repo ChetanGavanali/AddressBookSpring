@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class TokenUtil {
 
 
-    private static final String TOKEN_SECRET = "Warlock";
+    private static final String TOKEN_SECRET = "Test";
 
 
     public static String createToken(int id)   {

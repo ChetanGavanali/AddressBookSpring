@@ -16,10 +16,10 @@ public class AddressDto {
     @Pattern(regexp = "^[1-9]{2}[0-9]{10}$", message="Invalid PhoneNumber")
     String phoneNumber;
     String address;
-    String city;
+    List<String> city;
     String state;
     @Pattern(regexp = "^[1-9]{1}[0-9]{5}$", message="Invalid Zip Code")
     String zip;
     Long zipcode;
-    private List<String> email;
+    private  String email;
 }

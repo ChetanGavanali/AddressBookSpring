@@ -18,12 +18,14 @@ public class AddressBook {
     private Long Id;
     String fullName;
     String phoneNumber;
-    @ElementCollection
-    @CollectionTable(name="AddressBook_Email",joinColumns=@JoinColumn(name="ID"))
-    @Column(name="Email")
-    private List<String> email;
+
+    private String email;
     String address;
-    String city;
+
+    @ElementCollection
+    @CollectionTable(name="AddressBook_City",joinColumns=@JoinColumn(name="ID"))
+    @Column(name="City")
+    private List<String> city;
     String state;
     Long zipcode;
 

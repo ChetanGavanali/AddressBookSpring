@@ -9,8 +9,10 @@ import java.util.List;
 
 @Repository
 public interface Repo extends JpaRepository<AddressBook, Long> {
-    @Query(value="SELECT * FROM address_book,address_book_email WHERE userid = id AND email = :email", nativeQuery=true)
+    @Query(value="SELECT * FROM address_book WHERE userid = userid AND email = :email", nativeQuery=true)
     List<AddressBook> findAddressBookByemail(String email);
-    @Query(value="SELECT * FROM address_book WHERE userid = userid AND city = :city", nativeQuery=true)
+    @Query(value="SELECT * FROM address_book,address_book_City WHERE userid = id AND city = :city", nativeQuery=true)
     List<AddressBook> findAddressBookBycity(String city);
+
+
 }
