@@ -86,7 +86,6 @@ public class AddressBookService implements AddressBookIService {
         sendEmail.sendEmail(addressBook.getEmail(),"Added Your Details", userData);
         return token;
     }
-
     @Override
     public List<AddressBook> getDataByToken(String token) {
         long Id=TokenUtil.decodeToken(token);
@@ -98,7 +97,6 @@ public class AddressBookService implements AddressBookIService {
             throw new AddressBookException("Token is not found!");
         }
     }
-
     @Override
     public Optional<AddressBook> getAllUserByToken(String token) {
         int Userid = TokenUtil.decodeToken(token);
